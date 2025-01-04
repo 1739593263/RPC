@@ -1,9 +1,12 @@
 package com.rpc.basic.model;
 
+import com.rpc.basic.serializer.Serializer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * rpc request
@@ -12,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RpcRequestModel {
+public class RpcRequestModel implements Serializable {
     /**
      * service name
      */

@@ -1,12 +1,14 @@
 package com.rpc.example.consumer;
 
+import com.rpc.basic.proxy.ServiceProxyFactory;
 import com.rpc.example.model.User;
 import com.rpc.example.services.UserService;
 
 public class ExampleConsumerExample {
     public static void main(String[] args) {
-        // todo: get the implement userService method by RPC.
-        UserService userService = null;
+        // get the proxy class of userService
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+
         User user = new User();
         user.setName("Kun");
         User newUser = userService.getUser(user);

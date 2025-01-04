@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    String name;
+    private String name;
 
     public String getName() {
         return name;

@@ -28,7 +28,7 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
             byte[] bytes = body.getBytes();
             RpcRequestModel requestModel = null;
             try {
-                serializer.deserialize(bytes, RpcRequestModel.class);
+                requestModel = serializer.deserialize(bytes, RpcRequestModel.class);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -40,8 +40,9 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
             }
 
             try {
+                // get the invoked service class by reflection
                 Class<?> implClass = LocalRegistry.get(requestModel.getServiceName());
-                Method method = implClass.getMethod(requestModel.getMethodName(), responseModel.getParameterType());
+                Method method = implClass.getMethod(requestModel.getMethodName(), requestModel.getParameterType());
                 Object result = method.invoke(implClass.newInstance(), requestModel.getArgs());
 
                 // encapsulate the response result
