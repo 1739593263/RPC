@@ -16,6 +16,6 @@ public class EasyProviderExample {
 
         // launch the server
         HttpServer vertxHttpServer = new VertxHttpServer();
-        vertxHttpServer.start(RpcApplication.getConfig().getPort());
+        vertxHttpServer.start(RpcApplication.getConfig().getServerPort());
     }
 }
