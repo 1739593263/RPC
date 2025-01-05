@@ -8,6 +8,7 @@
         <module>rpc-basic</module>
         <module>example-consumer</module>
         <module>example-provider</module>
+        <module>rpc-core</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

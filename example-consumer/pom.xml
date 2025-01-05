@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>com.javastructure</groupId>
-            <artifactId>rpc-basic</artifactId>
+            <artifactId>rpc-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
