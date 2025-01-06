@@ -1,6 +1,6 @@
 package com.rpc.example.consumer;
 
-import com.rpc.basic.proxy.ServiceProxyFactory;
+import com.rpc.core.proxy.ServiceProxyFactory;
 import com.rpc.core.config.RpcConfig;
 import com.rpc.core.utils.ConfigUtils;
 import com.rpc.example.model.User;
@@ -22,5 +22,9 @@ public class ExampleConsumerExample {
         } else {
             System.out.println("No User found");
         }
+
+        // get a primitive result
+        short num = userService.getNum();
+        System.out.println("Mock: "+num);
     }
 }

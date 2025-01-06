@@ -11,4 +11,9 @@ public class RpcConfig {
     private String serverHost = "localhost";
 
     private Integer serverPort = 8080;
+
+    /**
+     * mock invoke rpc interface
+     */
+    private boolean mock = false;
 }

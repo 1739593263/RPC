@@ -13,4 +13,12 @@ public interface UserService {
      * @return
      */
     User getUser(User user);
+
+
+    /**
+     *  Get a Primitive result
+     */
+    default short getNum() {
+        return 1;
+    }
 }
