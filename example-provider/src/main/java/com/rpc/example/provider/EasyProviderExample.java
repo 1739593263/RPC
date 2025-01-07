@@ -1,8 +1,8 @@
 package com.rpc.example.provider;
 
-import com.rpc.basic.Registry.LocalRegistry;
-import com.rpc.basic.server.HttpServer;
-import com.rpc.basic.server.VertxHttpServer;
+import com.rpc.core.Registry.LocalRegistry;
+import com.rpc.core.server.HttpServer;
+import com.rpc.core.server.VertxHttpServer;
 import com.rpc.core.RpcApplication;
 import com.rpc.example.services.UserService;
 
