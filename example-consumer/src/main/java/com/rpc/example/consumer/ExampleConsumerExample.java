@@ -23,7 +23,7 @@ public class ExampleConsumerExample {
             System.out.println("No User found");
         }
 
-        // get a primitive result
+        // get a primitive value
         short num = userService.getNum();
         System.out.println("Mock: "+num);
     }

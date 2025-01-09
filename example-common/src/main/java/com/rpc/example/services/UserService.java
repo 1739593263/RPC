@@ -16,9 +16,10 @@ public interface UserService {
 
 
     /**
-     *  Get a Primitive result
+     *  Get a Primitive value
      */
     default short getNum() {
-        return 1;
+        short res=1;
+        return res;
     }
 }
