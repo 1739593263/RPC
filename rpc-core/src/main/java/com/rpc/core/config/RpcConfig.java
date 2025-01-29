@@ -20,4 +20,9 @@ public class RpcConfig {
      * mock invoke rpc interface
      */
     private boolean mock = false;
+
+    /**
+     * Registry
+     */
+    private RegistryConfig registryConfig = new RegistryConfig();
 }
