@@ -12,7 +12,7 @@ public class RpcConfig {
 
     private String serverHost = "localhost";
 
-    private Integer serverPort = 8080;
+    private Integer serverPort = 8081;
 
     private String serializer = SerializerKeys.JDK;
 
